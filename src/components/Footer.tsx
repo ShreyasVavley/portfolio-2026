@@ -16,12 +16,6 @@ export default function Footer() {
             <span>Motion Graphics</span>
           </div>
 
-          <div className="flex flex-col items-center gap-1">
-            <span>5+ years of experience</span>
-            <a href="#projects" className="text-white hover:text-cyan-400 transition-colors underline underline-offset-4 decoration-white/30">
-              View Work
-            </a>
-          </div>
 
           <div className="flex flex-col items-end gap-1 text-right">
             <span>Worldwide Available</span>
