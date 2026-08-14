@@ -145,7 +145,7 @@ function ProjectIntelPanel({
               </span>
             </div>
             <p className="text-white/70 text-base leading-relaxed">
-              {project.description}
+              {project.longDesc}
             </p>
           </div>
 
@@ -193,7 +193,7 @@ function ProjectIntelPanel({
           <div className="flex flex-col sm:flex-row gap-3">
             {/* Primary: Open repo */}
             <a
-              href={project.githubUrl}
+              href={project.links.github}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-mono text-sm font-bold tracking-wider transition-all duration-200 hover:brightness-110 hover:scale-[1.02] active:scale-95"
@@ -211,7 +211,7 @@ function ProjectIntelPanel({
 
             {/* Secondary: direct link */}
             <a
-              href={project.liveUrl}
+              href={project.links.live}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-mono text-sm border text-white/50 hover:text-white/90 hover:bg-white/5 transition-all duration-200"
@@ -302,7 +302,7 @@ export default function PortalOverlay({ project, originRect, onClose }: PortalOv
   const contentRef = useRef<HTMLDivElement>(null);
   const isAnimating = useRef(false);
 
-  const blocked = project ? isIframeBlocked(project.liveUrl) : false;
+  const blocked = project ? isIframeBlocked(project.links.live) : false;
 
   // Entry animation
   useEffect(() => {
@@ -384,7 +384,7 @@ export default function PortalOverlay({ project, originRect, onClose }: PortalOv
           {/* Right: actions */}
           <div className="flex items-center gap-2">
             <a
-              href={project.githubUrl}
+              href={project.links.github}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-mono text-xs text-white/45 border border-white/10 hover:text-white/80 hover:border-white/20 transition-all"
@@ -393,7 +393,7 @@ export default function PortalOverlay({ project, originRect, onClose }: PortalOv
               REPO
             </a>
             <a
-              href={project.liveUrl}
+              href={project.links.live}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-mono text-xs text-white/45 border border-white/10 hover:text-neon-cyan hover:border-neon-cyan/30 transition-all"
@@ -422,7 +422,7 @@ export default function PortalOverlay({ project, originRect, onClose }: PortalOv
           {blocked ? (
             <ProjectIntelPanel project={project} onClose={handleClose} />
           ) : (
-            <LiveIframe url={project.liveUrl} title={project.title} />
+            <LiveIframe url={project.links.live} title={project.title} />
           )}
         </div>
 

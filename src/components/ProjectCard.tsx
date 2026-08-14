@@ -147,7 +147,7 @@ export default function ProjectCard({ project, onLaunch, isActive }: ProjectCard
 
         {/* Description */}
         <p className="text-white/55 text-sm leading-relaxed mb-5 line-clamp-3">
-          {project.description}
+          {project.shortDesc}
         </p>
 
         {/* Tech stack */}
@@ -189,7 +189,7 @@ export default function ProjectCard({ project, onLaunch, isActive }: ProjectCard
 
           {/* GitHub */}
           <a
-            href={project.githubUrl}
+            href={project.links.github}
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
@@ -201,7 +201,7 @@ export default function ProjectCard({ project, onLaunch, isActive }: ProjectCard
 
           {/* Live link */}
           <a
-            href={project.liveUrl}
+            href={project.links.live}
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
