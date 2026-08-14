@@ -1,41 +1,33 @@
-'use client';
-
-import dynamic from 'next/dynamic';
-import React, { useState, useCallback } from 'react';
-import LoadingScreen from '@/components/LoadingScreen';
-
-// Dynamically import heavy components — avoids SSR issues with WebGL
-const SpaceBackground = dynamic(() => import('@/components/SpaceBackground'), {
-  ssr: false,
-  loading: () => null,
-});
-
-const ScrollTimeline = dynamic(() => import('@/components/ScrollTimeline'), {
-  ssr: false,
-  loading: () => null,
-});
+import React from 'react';
+import Navbar from '@/components/Navbar';
+import HeroSection from '@/components/HeroSection';
+import AboutSection from '@/components/AboutSection';
+import SkillsSection from '@/components/SkillsSection';
+import ProjectsGrid from '@/components/ProjectsGrid';
+import Certifications from '@/components/Certifications';
+import ActivitySection from '@/components/ActivitySection';
+import ContactSection from '@/components/ContactSection';
+import Footer from '@/components/Footer';
+import PageTransition from '@/components/PageTransition';
+import SpotifyWidget from '@/components/SpotifyWidget';
+import TerminalOverlay from '@/components/TerminalOverlay';
 
 export default function HomePage() {
-  const [loaded, setLoaded] = useState(false);
-
-  const handleLoadComplete = useCallback(() => {
-    setLoaded(true);
-  }, []);
-
   return (
-    <main className="relative min-h-screen bg-obsidian">
-      {/* Loading screen — always rendered, self-removes via GSAP */}
-      <LoadingScreen onComplete={handleLoadComplete} />
-
-      {/* 3D space background — fixed, behind everything */}
-      <SpaceBackground />
-
-      {/* Main content — only shown after load */}
-      {loaded && (
-        <div className="relative z-10">
-          <ScrollTimeline />
-        </div>
-      )}
+    <main className="relative min-h-screen">
+      <Navbar />
+      <PageTransition>
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <ProjectsGrid />
+        <Certifications />
+        <ActivitySection />
+        <ContactSection />
+        <Footer />
+        <SpotifyWidget />
+        <TerminalOverlay />
+      </PageTransition>
     </main>
   );
 }
