@@ -76,14 +76,12 @@ export default function SkillsSection() {
             {/* Animated Connecting Laser Line Background */}
             <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-full max-w-[800px] h-full pointer-events-none hidden md:block z-0 opacity-60">
               <svg className="w-full h-full" preserveAspectRatio="none" viewBox="0 0 500 1300">
-                {/* Background faint path */}
                 <path 
                   d="M 100,100 C 100,400 400,200 400,500 C 400,800 100,600 100,900 C 100,1200 400,1000 400,1250" 
                   fill="none" 
                   stroke="#f1f5f9" 
                   strokeWidth="6" 
                 />
-                {/* Animated drawing path */}
                 <motion.path 
                   initial={{ pathLength: 0, strokeDashoffset: 0 }}
                   whileInView={{ pathLength: 1 }}
@@ -91,6 +89,38 @@ export default function SkillsSection() {
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ 
                     pathLength: { duration: 2.5, ease: "easeInOut" },
+                    strokeDashoffset: { repeat: Infinity, duration: 1, ease: "linear" }
+                  }}
+                  d="M 100,100 C 100,400 400,200 400,500 C 400,800 100,600 100,900 C 100,1200 400,1000 400,1250" 
+                  fill="none" 
+                  stroke="#ef4444" 
+                  strokeWidth="6" 
+                  strokeDasharray="12 12" 
+                />
+              </svg>
+            </div>
+
+            <div className="flex flex-col gap-24 relative z-10">
+              {skills.map((skillGroup, idx) => {
+                const isEven = idx % 2 === 0;
+                
+                return (
+                  <motion.div
+                    key={skillGroup.category}
+                    initial={{ opacity: 0, y: 50, rotateZ: isEven ? -10 : 10 }}
+                    whileInView={{ opacity: 1, y: 0, rotateZ: isEven ? -3 : 3 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    whileHover={{ scale: 1.05, rotateZ: 0, zIndex: 30 }}
+                    transition={{ duration: 0.5, type: "spring", bounce: 0.4 }}
+                    className={`relative w-full md:w-[85%] lg:w-[400px] ${isEven ? 'md:self-start' : 'md:self-end'}`}
+                  >
+                    {/* Tablet Frame Aesthetic (Red Light Mode) */}
+                    <div className="relative bg-[#ef4444] rounded-[2rem] p-8 border-t border-white/20 shadow-[0_20px_50px_rgba(239,68,68,0.4)] overflow-hidden group">
+                      
+                      {/* Top Camera cutout */}
+                      <div className="absolute top-3 left-1/2 -translate-x-1/2 w-12 h-4 bg-black/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                        <div className="w-1.5 h-1.5 rounded-full bg-white/50"></div>
+                      </div>
                       
                       <div className="relative z-10 pt-4">
                         <span className="text-4xl font-serif italic font-bold text-white/30 block mb-4">
@@ -129,8 +159,6 @@ export default function SkillsSection() {
                             </motion.span>
                           ))}
                         </motion.p>
-                        
-                        {/* Hidden items array to simplify the card visually, matching screenshots which don't show the pill tags on these red cards */}
                       </div>
                     </div>
                   </motion.div>
