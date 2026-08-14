@@ -63,7 +63,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           </div>
           
           <p className="text-lg text-zinc-300 leading-relaxed mb-10 font-light">
-            {project.description}
+            {project.longDesc}
           </p>
 
           <div className="mb-10">
@@ -78,9 +78,9 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           </div>
 
           <div className="flex flex-wrap gap-4 pt-6 border-t border-white/10">
-            {project.githubUrl && (
+            {project.links.github && project.links.github !== "#" && (
               <a 
-                href={project.githubUrl} 
+                href={project.links.github} 
                 target="_blank" 
                 rel="noreferrer"
                 className="flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-black font-medium hover:bg-zinc-200 transition-colors"
@@ -88,9 +88,9 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 <Code size={18} /> View Source
               </a>
             )}
-            {project.liveUrl && (
+            {project.links.live && project.links.live !== "#" && (
               <a 
-                href={project.liveUrl} 
+                href={project.links.live} 
                 target="_blank" 
                 rel="noreferrer"
                 className="flex items-center gap-2 px-6 py-3 rounded-xl bg-white/10 text-white font-medium border border-white/10 hover:bg-white/20 transition-colors"

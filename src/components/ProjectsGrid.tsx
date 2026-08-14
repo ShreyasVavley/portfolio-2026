@@ -98,7 +98,7 @@ export default function ProjectsGrid() {
                     </motion.h3>
                     
                     <motion.p layoutId={`project-desc-${project.id}`} className="text-zinc-500 font-medium text-sm leading-relaxed mb-10 flex-grow line-clamp-4">
-                      {project.description}
+                      {project.shortDesc}
                     </motion.p>
                     
                     <div className="flex flex-wrap gap-2 mt-auto mb-6">
