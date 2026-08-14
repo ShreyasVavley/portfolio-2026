@@ -9,7 +9,6 @@ import ActivitySection from '@/components/ActivitySection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import PageTransition from '@/components/PageTransition';
-import SpotifyWidget from '@/components/SpotifyWidget';
 import TerminalOverlay from '@/components/TerminalOverlay';
 
 export default function HomePage() {
@@ -25,7 +24,6 @@ export default function HomePage() {
         <ActivitySection />
         <ContactSection />
         <Footer />
-        <SpotifyWidget />
         <TerminalOverlay />
       </PageTransition>
     </main>
