@@ -35,6 +35,7 @@ export default function ActivitySection() {
               blockMargin={6}
               fontSize={14}
               theme={explicitTheme}
+              colorScheme="light"
             />
           </div>
         </div>
