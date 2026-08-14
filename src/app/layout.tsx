@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <body className="bg-[#09090b] text-zinc-50 overflow-x-hidden selection:bg-cyan-500/30 selection:text-cyan-200" suppressHydrationWarning>
         <div className="fixed inset-0 z-[-1] bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-900 via-[#09090b] to-[#09090b]"></div>
         <SmoothScroll>
