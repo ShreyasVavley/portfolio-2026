@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shreyas Vavley - 2026 Developer Portfolio
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-16.2-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white)
 
-First, run the development server:
+A high-performance, cinematic, and interactive personal portfolio built for the modern web. Engineered with bleeding-edge technologies to showcase full-stack development skills and UI/UX design capabilities.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔥 World-Class Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Cinematic Video Hero**: A high-resolution looping background video combined with blurred glassmorphism overlays and massive typography.
+- **Physics-Based Smooth Scrolling**: Powered by `Lenis` for a buttery-smooth, premium scrolling momentum experience.
+- **Interactive 3D Tech Globe**: A dynamic, rotating sphere constructed of technical stack keywords using `@react-three/fiber` and `Three.js`.
+- **Hacker Terminal Mode**: A hidden easter egg! Press `Ctrl + \` anywhere on the site to drop down an interactive, fully functional command-line interface.
+- **Live GitHub Activity Chart**: Dynamically renders real-time GitHub commits and contribution data using `react-github-calendar`.
+- **"Now Playing" Spotify Widget**: A beautifully animated audio-visualizer widget mimicking a live Spotify status.
+- **Dynamic Projects Grid**: Fetching real repository data from GitHub, complete with smooth scale-on-hover micro-interactions.
+- **Serverless Contact Form**: Fully functional email delivery system powered seamlessly by the Web3Forms API.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Technology Stack
 
-## Learn More
+- **Framework**: [Next.js 16 (Turbopack)](https://nextjs.org/) + [React 19](https://react.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/) + [GSAP](https://gsap.com/)
+- **3D Engine**: [Three.js](https://threejs.org/) + [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **API Integration**: Web3Forms
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Getting Started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To run this project locally, follow these steps:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/ShreyasVavley/portfolio-2026.git
+   cd portfolio-2026
+   ```
 
-## Deploy on Vercel
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. **View the site:**
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 🔗 Contact & Links
+
+- **Email**: shreyasvavley@gmail.com
+- **WhatsApp**: +91 9886620362
+- **GitHub**: [ShreyasVavley](https://github.com/ShreyasVavley)
+
+---
+*Designed & Engineered by Shreyas Vavley.*
